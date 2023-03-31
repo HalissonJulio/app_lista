@@ -1,14 +1,16 @@
-package pereira.lopes.julio.lista;
+package pereira.lopes.julio.lista.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import pereira.lopes.julio.lista.R;
+
+public class NewItemActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_new_item);
     }
 }

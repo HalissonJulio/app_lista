@@ -1,4 +1,4 @@
-package pereira.lopes.julio.lista;
+package pereira.lopes.julio.galeria;
 
 import android.content.Context;
 

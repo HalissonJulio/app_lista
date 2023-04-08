@@ -1,8 +1,5 @@
 package pereira.lopes.julio.galeria.activity.activity;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,7 +11,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import pereira.lopes.julio.galeria.R;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import pereira.lopes.julio.lista.R;
 
 public class NewItemActivity extends AppCompatActivity {
@@ -43,7 +42,7 @@ public class NewItemActivity extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                if(photoSelected == null){ // analizando se os campos foram preenchidos
+                if(photoSelected == null){ // Analizando se os campos foram preenchidos
                     Toast.makeText(NewItemActivity.this, "É necessário selecionar uma imagem!",Toast.LENGTH_LONG).show();
                     return;
                 }
@@ -60,7 +59,7 @@ public class NewItemActivity extends AppCompatActivity {
                     Toast.makeText(NewItemActivity.this,"É necessário inserir uma descrição",Toast.LENGTH_LONG).show();
                     return;
                 }
-                //Guarda os dados acima e manda pra main
+                // Guarda os dados acima e envia para o main
                 Intent i = new Intent();
                 i.setData(photoSelected);
                 i.putExtra("title",title);
@@ -72,9 +71,9 @@ public class NewItemActivity extends AppCompatActivity {
 
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){ //3 parametros, 1° é qual a chamada de startactivityforresult a resposta se refere, 2°cod que fala se a activity retornou com sucesso e 3° dados retornados da activity
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){ // 3 parametros, 1° é qual a chamada de startactivityforresult a resposta se refere, 2°cod que fala se a activity retornou com sucesso e 3° dados retornados da activity
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == PHOTO_PICKER_REQUEST){ //Vemos se é igual a chamada
+        if(requestCode == PHOTO_PICKER_REQUEST){ // Vemos se é igual a chamada
             if (resultCode == Activity.RESULT_OK){ // Vemos se a Activity retornou verta
                 photoSelected = data.getData(); // Pegando o URI (endereço) da imagem
                 ImageView imvfotoPreview = findViewById(R.id.imvPhotoPreview); // Pegando o campo img

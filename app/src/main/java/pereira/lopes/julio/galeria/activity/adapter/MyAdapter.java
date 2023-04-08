@@ -11,9 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import pereira.lopes.julio.galeria.R;
-import pereira.lopes.julio.galeria.activity.model.MyItem;
 import pereira.lopes.julio.galeria.activity.activity.MainActivity;
+import pereira.lopes.julio.galeria.activity.model.MyItem;
 import pereira.lopes.julio.lista.R;
 
 public class MyAdapter extends RecyclerView.Adapter {
@@ -35,13 +34,13 @@ public class MyAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) { //Parametros 1° os intens criados na onCreateViewHolder e 2° qual o item deve ser usado para preencher o item
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) { // Parametros 1° os intens criados na onCreateViewHolder e 2° qual o item deve ser usado para preencher o item
         // onBindViewHolder preenche a UI com os dados de item
 
-        MyItem myItem = itens.get(position); //pegamos o item
-        View v = holder.itemView; //pegamos o view que está dento de viwholder
+        MyItem myItem = itens.get(position); // Pegamos o item
+        View v = holder.itemView; // Pegando o view que está dento de viwholder
 
-        //Preenchendo os dados da UI com os dados do item
+        // Preenchendo os dados da UI com os dados do item
         ImageView imvfoto = v.findViewById(R.id.imvPhoto);
         imvfoto.setImageURI(myItem.photo);
 

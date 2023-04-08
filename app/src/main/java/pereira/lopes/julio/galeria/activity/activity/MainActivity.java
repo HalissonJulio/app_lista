@@ -1,27 +1,26 @@
 package pereira.lopes.julio.galeria.activity.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import pereira.lopes.julio.galeria.R;
 import pereira.lopes.julio.galeria.activity.adapter.MyAdapter;
 import pereira.lopes.julio.galeria.activity.model.MyItem;
 import pereira.lopes.julio.lista.R;
 
 public class MainActivity extends AppCompatActivity {
-    static int NEW_ITEM_REQUEST = 1; //Usado para saber qual a tela está sendo requerida
+    static int NEW_ITEM_REQUEST = 1; // Usado para saber qual a tela está sendo requerida
     MyAdapter myAdapter;
     List<MyItem> itens = new ArrayList<>();
     @Override
